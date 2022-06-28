@@ -1,0 +1,78 @@
+*
+  box-sizing: border-box
+
+body
+  background: #f69a73
+
+
+.app
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.form
+  width: 400px
+  margin: 10px auto 0
+  background: white
+  border-radius: 30px
+
+.form-inner
+  padding: 30px
+
+  h3
+    margin-top: 0
+    font-family: 'Roboto', sans-serif
+    font-weight: 500
+    font-size: 24px
+    color: #707981
+
+  input, textarea
+    display: block
+    width: 100%
+    padding: 0 20px
+    margin-bottom: 10px
+    background: #E9EFF6
+    line-height: 40px
+    border-width: 0
+    border-radius: 20px
+    font-family: 'Roboto', sans-serif
+    color: gray
+    cursor: pointer
+
+  textarea
+    resize: none
+    overflow: hidden
+
+  input[type='submit']
+    margin-top: 15px
+    background: #f69a73
+    border-bottom: 4px solid #d87d56
+    color: white
+    font-size: 14px
+
+    &.disabled
+      opacity: .2
+      cursor: wait
+
+  span
+    width: 100%
+    display: inline-block
+    text-align: center
+    margin-bottom: 10px
+    font-family: 'Roboto', sans-serif
+    font-weight: 500
+    font-size: 12px
+    color: #fa0303
+
+.field-message
+  max-width: 300px
+  text-align: center
+  margin: 20px auto
+  padding: 10px
+  border-radius: 30px
+  font-family: 'Roboto', sans-serif
+  font-weight: 700
+  background: #E9EFF6
+  color: #fa0303
+
+

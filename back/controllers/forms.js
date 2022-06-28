@@ -1,39 +1,27 @@
 const createForm = async (req, res) => {
 
-    const errors = {};
-
-    if (!req.body.name) {
-        errors.name = {message: 'Укажите Имя и Фамилию'}
-    }
-
-    if (!req.body.email) {
-        errors.email = {message: 'Укажите email'}
-    }
-
-    if (!req.body.phone) {
-        errors.phone = {message: 'Укажите номер телефона'}
-    }
-
-    if (!req.body.brithday) {
-        errors.brithday = {message: 'Укажите дату рождения'}
-    }
-
-    if (!req.body.message) {
-        errors.message = {message: 'Укажите сообщение'}
-    }
-
-    if (Object.keys(errors).length > 0) {
+    console.log(req.body)
+    console.log(req.body.name)
+    if (!req.body) {
         return res
             .status(400)
+            .set({
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Access-Control-Allow-Origin": "*",
+            })
             .json({
                 status: 'error',
-                ...errors
+                message: 'Неправильная передача данных'
             })
     }
 
     try {
         res
             .status(201)
+            .set({
+                "Content-Type": "application/x-www-form-urlencoded",
+                "Access-Control-Allow-Origin": "*",
+            })
             .json({
                 status: 'success',
                 message: 'Форма успешно отправлена'
